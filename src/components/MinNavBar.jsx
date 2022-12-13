@@ -1,6 +1,8 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 
 const MinNavBar = ({ currEle, setCurrEle }) => {
+    const location = useLocation();
     return (
         <div className="w-full flex justify-center">
             <div className="w-full max-w-[1400px] flex justify-center items-center">
@@ -30,8 +32,8 @@ const MinNavBar = ({ currEle, setCurrEle }) => {
                 </div>
                 <a
                     href={
-                        "/pdfs/" +
-                        currEle +
+                        "/pdfs" +
+                        location.pathname +
                         "-powershell-cmd-definitions-beta.pdf"
                     }
                     download
